@@ -21,8 +21,8 @@ Simple Responsive NFT Preview Card using HTML and CSS
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Github repo](https://github.com/AhmedLebda/Frontend-Mentor-nft-preview-card.git)
+-   Live Site URL: [live site](https://ahmedlebda.github.io/Frontend-Mentor-nft-preview-card/)
 
 ### Built with
 
