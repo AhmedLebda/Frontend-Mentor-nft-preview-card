@@ -1,0 +1,177 @@
+/* Global Variables */
+:root {
+    /* Fonts */
+    --font-outfit: "Outfit", sans-serif;
+    /* Colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg-color: hsl(217, 54%, 11%);
+    --card-bg-color: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    --white-color: hsl(0, 0%, 100%);
+    /* margins */
+    --main-margin: 20px;
+}
+
+/* Global styles */
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: var(--main-bg-color);
+    font-family: var(--font-outfit);
+}
+
+/* Start of NFT card styles */
+main.content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card-wrapper {
+    background-color: var(--card-bg-color);
+    padding: 25px;
+    max-width: 400px;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+/* Image Styles */
+.image-wrapper {
+    position: relative;
+    margin-bottom: var(--main-margin);
+    cursor: pointer;
+}
+.image-wrapper::before {
+    content: "";
+    background-color: hsla(178.1, 100%, 50%, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 4px);
+    border-radius: 15px;
+    opacity: 0;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+.image-wrapper::after {
+    content: url(../images/icon-view.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+.image-wrapper:hover::before,
+.image-wrapper:hover::after {
+    opacity: 1;
+}
+.image-wrapper img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+/* Card info Styles */
+.card-info h1 {
+    color: var(--white-color);
+    font-weight: 700;
+    margin-bottom: var(--main-margin);
+    font-size: 1.8rem;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.card-info h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+.card-info p {
+    color: var(--soft-blue);
+    margin-bottom: var(--main-margin);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Card Price info styles  */
+.price-info {
+    margin-bottom: var(--main-margin);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.price-info .price {
+    color: var(--cyan);
+    font-size: 18px;
+}
+.price-info .price img {
+    margin-right: 5px;
+}
+.price-info .exp {
+    color: var(--soft-blue);
+    font-size: 18px;
+}
+.price-info .exp img {
+    margin-right: 5px;
+}
+
+hr {
+    color: var(--line-color);
+    margin-bottom: var(--main-margin);
+}
+
+/* Author info styles */
+.author {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 20px;
+}
+.author img {
+    max-width: 12%;
+    border: 1px solid var(--white-color);
+    border-radius: 50%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.author h4 {
+    -webkit-box-flex: 5;
+    -ms-flex: 5;
+    flex: 5;
+    font-size: 18px;
+    color: var(--soft-blue);
+}
+.author h4 span {
+    color: var(--white-color);
+    text-transform: capitalize;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.author h4 span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
